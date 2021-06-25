@@ -1,0 +1,252 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 25.06.2021 15:25
+Description: Rendering entity in world
+
+net.minecraft.class_151: Non [a-z0-9/._-] character in path of location: ratsmischief:textures/entity/lıght_brown.png
+	at net.minecraft.class_2960.<init>(class_2960.java:41)
+	at net.minecraft.class_2960.<init>(class_2960.java:50)
+	at ladysnake.ratsmischief.client.model.RatEntityModel.getTextureLocation(RatEntityModel.java:25)
+	at ladysnake.ratsmischief.client.model.RatEntityModel.getTextureLocation(RatEntityModel.java:11)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.getTextureLocation(GeoEntityRenderer.java:282)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.getTexture(GeoEntityRenderer.java:202)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:157)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.method_3936(GeoEntityRenderer.java:41)
+	at net.minecraft.class_898.method_3954(class_898.java:135)
+	at net.minecraft.class_761.method_22977(class_761.java:1483)
+	at net.minecraft.class_761.redirect$zla000$redirectRenderEntity(class_761.java:5587)
+	at net.minecraft.class_761.method_22710(class_761.java:1231)
+	at net.minecraft.class_757.method_3188(class_757.java:1001)
+	at net.minecraft.class_757.redirect$zkk000$redirectRenderingWorld(class_757.java:3092)
+	at net.minecraft.class_757.method_3192(class_757.java:806)
+	at net.minecraft.class_310.method_1523(class_310.java:1114)
+	at net.minecraft.class_310.method_1514(class_310.java:730)
+	at net.minecraft.client.main.Main.main(Main.java:217)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:234)
+	at net.fabricmc.loader.launch.knot.Knot.launch(Knot.java:153)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.class_2960.<init>(class_2960.java:41)
+	at net.minecraft.class_2960.<init>(class_2960.java:50)
+	at ladysnake.ratsmischief.client.model.RatEntityModel.getTextureLocation(RatEntityModel.java:25)
+	at ladysnake.ratsmischief.client.model.RatEntityModel.getTextureLocation(RatEntityModel.java:11)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.getTextureLocation(GeoEntityRenderer.java:282)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.getTexture(GeoEntityRenderer.java:202)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:157)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.method_3936(GeoEntityRenderer.java:41)
+
+-- Entity being rendered --
+Details:
+	Entity Type: ratsmischief:rat (ladysnake.ratsmischief.common.entity.RatEntity)
+	Entity ID: 16
+	Entity Name: Rat
+	Entity's Exact location: -30.50, 4.00, 182.50
+	Entity's Block location: World: (-31,4,182), Section: (at 1,4,6 in -2,0,11; chunk contains blocks -32,0,176 to -17,255,191), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: ladysnake.ratsmischief.client.render.entity.RatEntityRenderer@5f9e1f28
+	Location: 0.00,0.00,2.00 - World: (0,0,2), Section: (at 0,0,2 in 0,0,0; chunk contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Rotation: -77.34375
+	Delta: 0.0
+Stacktrace:
+	at net.minecraft.class_898.method_3954(class_898.java:135)
+	at net.minecraft.class_761.method_22977(class_761.java:1483)
+	at net.minecraft.class_761.redirect$zla000$redirectRenderEntity(class_761.java:5587)
+	at net.minecraft.class_761.method_22710(class_761.java:1231)
+	at net.minecraft.class_757.method_3188(class_757.java:1001)
+	at net.minecraft.class_757.redirect$zkk000$redirectRenderingWorld(class_757.java:3092)
+
+-- Affected level --
+Details:
+	All players: 1 total; [class_746['EnderSlayer7809'/79, l='ClientWorld minecraft:overworld', x=-30.50, y=4.00, z=180.50]]
+	Chunk stats: Client Chunks (ImmPtl) 483
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-32,4,176), Section: (at 0,4,0 in -2,0,11; chunk contains blocks -32,0,176 to -17,255,191), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 669 game time, 669 day time
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.class_638.method_8538(class_638.java:370)
+	at net.minecraft.class_310.method_1587(class_310.java:2399)
+	at net.minecraft.class_310.method_1514(class_310.java:749)
+	at net.minecraft.client.main.Main.main(Main.java:217)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:234)
+	at net.fabricmc.loader.launch.knot.Knot.launch(Knot.java:153)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:28)
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default, Fabric Mods, Black Icons, Classic Icons, White Icons
+
+-- System Details --
+Details:
+	Minecraft Version: 1.17
+	Minecraft Version ID: 1.17
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 16.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 1408914480 bytes (1343 MiB) / 2147483648 bytes (2048 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+	Identifier: Intel64 Family 6 Model 142 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 1,80
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: NVIDIA GeForce 930MX
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 2048,00
+	Graphics card #0 deviceId: 0x134e
+	Graphics card #0 versionInfo: DriverVersion=27.21.14.5296
+	Graphics card #1 name: Intel(R) UHD Graphics 620
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 1024,00
+	Graphics card #1 deviceId: 0x5917
+	Graphics card #1 versionInfo: DriverVersion=27.20.100.8681
+	Memory slot #0 capacity (MB): 8192,00
+	Memory slot #0 clockSpeed (GHz): 2,40
+	Memory slot #0 type: DDR4
+	Virtual memory max (MB): 19859,20
+	Virtual memory used (MB): 11488,96
+	Swap memory total (MB): 11776,00
+	Swap memory used (MB): 962,54
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	Fabric Mods: 
+		adorn: Adorn 2.0.0+1.17
+		animal_feeding_trough: Animal Feeding Trough 1.0.2
+		architectury: Architectury 2.0.11
+		betterdroppeditems: Better Dropped Items 1.3.0-1.17
+		bosses_of_mass_destruction: Bosses of Mass Destruction (Beta) 1.2.1-1.17
+		cardinal-components: Cardinal Components API 3.0.0
+		cardinal-components-base: Cardinal Components API (base) 3.0.0
+		cardinal-components-block: Cardinal Components API (blocks) 3.0.0
+		cardinal-components-chunk: Cardinal Components API (chunks) 3.0.0
+		cardinal-components-entity: Cardinal Components API (entities) 3.0.0
+		cardinal-components-item: Cardinal Components API (items) 3.0.0
+		cardinal-components-level: Cardinal Components API (world saves) 3.0.0
+		cardinal-components-scoreboard: Cardinal Components API (scoreboard) 3.0.0
+		cardinal-components-util: Cardinal Components API (utilities) 3.0.0
+		cardinal-components-world: Cardinal Components API (worlds) 3.0.0
+		cloth-basic-math: Cloth Basic Math 0.5.1
+		cloth-config2: Cloth Config v4 5.0.34
+		croptopia: Croptopia ${mod_version}
+		enchant_giver: Enchant Giver 1.1.0
+		extratnt: Extra TNT 1.0.2
+		fabric: Fabric API 0.36.0+1.17
+		fabric-api-base: Fabric API Base 0.3.0+a02b44633d
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.2.0+2b5c62d03d
+		fabric-biome-api-v1: Fabric Biome API (v1) 3.1.11+c345aea83d
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.5+a02b44633d
+		fabric-command-api-v1: Fabric Command API (v1) 1.1.1+a02b44633d
+		fabric-commands-v0: Fabric Commands (v0) 0.2.2+92519afa3d
+		fabric-containers-v0: Fabric Containers (v0) 0.1.12+a02b44633d
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.2.2+a02b44633d
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.5+be9da3103d
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 2.0.10+a02b44633d
+		fabric-entity-events-v1: Fabric Entity Events (v1) 1.1.0+a02b44633d
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.9+a722d8c03d
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.1+92519afa3d
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.6+a02b44633d
+		fabric-item-api-v1: Fabric Item API (v1) 1.2.4+a02b44633d
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.2.10+b7ab61213d
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.4+a02b44633d
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.2+36b77c3e3d
+		fabric-language-kotlin: Fabric Language Kotlin 1.6.1+kotlin.1.5.10
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.4.4+a02b44633d
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.4+a02b44633d
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.3+92519afa3d
+		fabric-models-v0: Fabric Models (v0) 0.3.0+a02b44633d
+		fabric-networking-api-v1: Fabric Networking API (v1) 1.0.11+b7ab61213d
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.11+a02b44633d
+		fabric-networking-v0: Fabric Networking (v0) 0.3.2+92519afa3d
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.10.9+b7ab61213d
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.3+a02b44633d
+		fabric-particles-v1: Fabric Particles (v1) 0.2.4+a02b44633d
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.7.10+e2961fee3d
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.4.3+676f40fa3d
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.8+a02b44633d
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.0+a02b44633d
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.5+a02b44633d
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.13+a02b44633d
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.2+92519afa3d
+		fabric-rendering-v1: Fabric Rendering (v1) 1.6.0+a02b44633d
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.4.7+b7ab61213d
+		fabric-screen-api-v1: Fabric Screen API (v1) 1.0.4+155f865c3d
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.8+a02b44633d
+		fabric-structure-api-v1: Fabric Structure API (v1) 1.1.11+e36969833d
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.1.4+a02b44633d
+		fabric-textures-v0: Fabric Textures (v0) 1.0.6+a02b44633d
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.2.12+b7ab61213d
+		fabricloader: Fabric Loader 0.11.6
+		geckolib3: Geckolib 3.0.5
+		imm_ptl_core: Immersive Portals Core 0.5
+		immersive_portals: Immersive Portals 0.5
+		inmis: Inmis 2.3.1-1.17
+		jankson: Jankson 3.0.1+j1.2.0
+		java: OpenJDK 64-Bit Server VM 16
+		lambdynlights: LambDynamicLights 2.0.1+1.17
+		libcd: LibCapableData 3.0.3+1.16.3
+		libgui: LibGui 4.0.0+1.17
+		libninepatch: LibNinePatch 1.1.0
+		maelstrom_library: Maelstrom Library 1.2.1-1.17
+		mcdw: MC Dungeons Weapons 3.2.2-1.17
+		minecraft: Minecraft 1.17
+		multipart_entities: MultipartEntities 1.1.2-1.17
+		omega-config: OmegaConfig 1.0.4
+		org_aperlambda_lambdajcommon: lambdajcommon 1.8.1
+		org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.5.10
+		org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.5.10
+		org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.5.10
+		org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.5.10
+		org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.5.0
+		org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.5.0
+		org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.2.1
+		org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.2.1
+		q_misc_util: A Miscellaneous Utility Library from qouteall 0.5
+		ratsmischief: Rat's Mischief 1.1.3
+		reach-entity-attributes: Reach Entity Attributes 2.1.1
+		roughlyenoughitems: Roughly Enough Items 6.0.258-alpha
+		spruceui: SpruceUI 3.2.0+1.17
+		truerooms: True Secret Rooms 1.1.4
+		voicechat: Simple Voice Chat 1.17-1.1.5
+		wi_zoom: WI Zoom 1.3-MC1.17.1-pre1
+	Launched Version: fabric-loader-0.11.6-1.17
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: Intel(R) UHD Graphics 620 GL version 3.2.0 - Build 27.20.100.8681, Intel
+	Window size: 1366x768
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla, Fabric Mods, Black Icons, Classic Icons, White Icons
+	Current Language: Türkçe (Türkiye)
+	CPU: 8x Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+	Player Count: 1 / 8; [class_3222['EnderSlayer7809'/79, l='ServerWorld minecraft:overworld rat deneyimi', x=-30.50, y=4.00, z=180.50]]
+	Data Packs: vanilla (incompatible), Fabric Mods
